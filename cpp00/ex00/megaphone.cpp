@@ -6,17 +6,11 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 18:25:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/04 19:17:20 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/17 21:20:36 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
-void	to_upper(char *s)
-{
-	for (int i = 0; s[i]; i++)
-		s[i] = std::toupper(s[i]);
-}
 
 int		main(int ac, char **av)
 {
@@ -29,11 +23,14 @@ int		main(int ac, char **av)
 		i = 1;
 		while (av[i])
 		{
-			to_upper(av[i]);
-			std::cout << av[i];
+			for (int j = 0; av[i][j]; j++)
+			{
+				av[i][j] = std::toupper(av[i][j]);
+				std::cout << av[i][j];
+			}
 			i++;
 		}
 	}
 	std::cout << std::endl;
-	return (0);
+	return 0;
 }
