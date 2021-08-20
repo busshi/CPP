@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 18:25:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/19 01:01:36 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/20 17:39:15 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 PhoneBook::PhoneBook( void ) {
 
-	_nbContacts = 0;
-	_maxContacts = 8;
+	nbContacts = 0;
 
 }
 
@@ -33,8 +32,8 @@ void	PhoneBook::addContact( void ) {
 	std::string	phone_number;
 	std::string	darkest_secret;
 
-	if (_nbContacts == _maxContacts) {
-		std::cout << "Your awesome phonebook already contains " << _maxContacts << " contacts!!! ";
+	if (nbContacts == maxContacts) {
+		std::cout << "Your awesome phonebook already contains " << maxContacts << " contacts!!! ";
 		std::cout << "Impossible to add another one..." << std::endl;
 	}
 	else {
@@ -59,7 +58,7 @@ void	PhoneBook::searchContact( void ) {
 
 	std::string	search;
 
-	if (_nbContacts == 0) {
+	if (nbContacts == 0) {
 		std::cout << "No contact in your awesome phonebook!!!" << std::endl;
 		return;
 	}

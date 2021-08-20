@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 23:49:44 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/19 00:58:03 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/20 17:37:55 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int		main( void ) {
 	std::cout << "--- AWESOME PHONEBOOK ---" << std::endl;
 	while (input != "EXIT")
 	{
-		//if (PhoneBook::nbContacts == PhoneBook::maxContacts)
-		//	std::cout << "\nSEARCH or EXIT" << std::endl;
-		//else
+		if (phoneBook.nbContacts == phoneBook.maxContacts)
+			std::cout << "\nSEARCH or EXIT" << std::endl;
+		else
 			std::cout << "\nADD, SEARCH or EXIT" << std::endl;
 		std::getline (std::cin, input);
 		if (input == "ADD")
