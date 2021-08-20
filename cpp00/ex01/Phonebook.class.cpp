@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 18:25:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/20 19:32:26 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/21 00:48:37 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ PhoneBook::~PhoneBook( void ) {
 
 void	PhoneBook::addContact( void ) {
 
-	if (nbContacts == maxContacts) {
-		std::cout << "Your awesome phonebook already contains " << maxContacts << " contacts!!! ";
-		std::cout << "Impossible to add another one..." << std::endl;
-		return;
-	}
-	contacts[nbContacts].addInfos();
-	nbContacts++;
+	unsigned	index = nbContacts;
+
+	if (nbContacts == maxContacts)
+		index = 0;
+	contacts[index].addInfos();
+	if (nbContacts < 8)
+		nbContacts++;
 
 }
 
@@ -40,47 +40,57 @@ void	PhoneBook::searchContact( void ) {
 
 	unsigned	search;
 
+	chooseContact();
+	std::cout << std::endl;
 	if (nbContacts == 0) {
+
 		std::cout << "No contact in your awesome phonebook!!!" << std::endl;
 		return;
+	
 	}
-	chooseContact();
-	std::cout << "\nWich index?" << std::endl;
-	std::cin >> search;
-	if (search < 0 || search > nbContacts - 1) {
+	
+	std::cout << "Which index?" << std::endl;
+	while (!(std::cin >> search) || search < 0 || search > nbContacts - 1) {
 
-		std::cout << "Index [" << search << "] is out of range! " << std::endl;
-		std::cout << "Please choose an index between 0 and " << nbContacts - 1 << std::endl;
+			std::cout << "Wrong input! Please choose an index between 0 and ";
+			std::cout << nbContacts - 1 << "." << std::endl;
+			std::cin.clear();
+			std::cin.ignore(1024, '\n');
 
 	}
-	else
-		contacts[search].getInfos();
-	std::cin.clear();
+	contacts[search].getInfos();
+	std::cin.ignore(1024, '\n');
 
 }
 
 void	PhoneBook::chooseContact( void ) {
 
-	std::cout << "index | ";
+	std::cout << std::endl << "|";
+	std::cout << std::setw(10) << "index";
 	for (unsigned i = 0; i < 3; i++) {
 
-		std::cout << contacts[0].categorie[i];
-		if (i < 2)
-			std::cout << " | ";
+		std::cout << "|";
+		std::cout << std::setw(10) << contacts[0].categorie[i];
 
 	}
+	std::cout << "|";
 	std::cout << std::endl;
 
 	for (unsigned i = 0; i < nbContacts; i++) {
 
-		std::cout << i << " | ";
+		std::cout << "|";
+		std::cout << std::setw(10) << i ;
 		for (unsigned j = 0; j < 3; j++) {
 			
-			std::cout << contacts[i].info[j];
-			if (j < 2)
-				std::cout << " | ";
+			std::cout << "|";
+			if (contacts[i].info[j].length() >= 10)
+				std::cout << std::setw(9) << contacts[i].info[j].substr(0, 9) << ".";
+			else
+				std::cout << std::setw(10) << contacts[i].info[j];
 
 		}
+		std::cout << "|";
 		std::cout << std::endl;
+
 	}
 }

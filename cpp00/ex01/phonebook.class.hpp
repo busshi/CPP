@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 23:43:32 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/20 19:30:57 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/20 22:26:47 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_CLASS_HPP
 
 # include <iostream>
+# include <iomanip>
 # include <string>
 # include "Contact.class.hpp"
 

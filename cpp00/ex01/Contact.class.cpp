@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 00:01:47 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/20 18:52:26 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/21 00:40:26 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	Contact::addInfos( void ) {
 
 		std::cout << Contact::categorie[i] << ": ";
 		std::getline (std::cin, info[i]);
+		if (!std::cin)
+			break;
 	
 	}
 
