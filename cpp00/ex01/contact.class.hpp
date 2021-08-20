@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.class.hpp                                  :+:      :+:    :+:   */
+/*   Contact.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 00:01:08 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/19 00:23:16 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/20 18:54:55 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,14 @@ class	Contact {
 
 public:
 
+	static const std::string	categorie[5];
+	std::string					info[5];
+
 	Contact( void );
 	~Contact( void );
 
-private:
-
-	std::string	contact_Infos[5];
+	void	addInfos( void );
+	void	getInfos( void );
 
 };
 

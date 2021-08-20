@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 18:25:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/20 17:39:15 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/20 19:32:26 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,44 +26,61 @@ PhoneBook::~PhoneBook( void ) {
 
 void	PhoneBook::addContact( void ) {
 
-	std::string	first_name;
-	std::string	last_name;
-	std::string	nickname;
-	std::string	phone_number;
-	std::string	darkest_secret;
-
 	if (nbContacts == maxContacts) {
 		std::cout << "Your awesome phonebook already contains " << maxContacts << " contacts!!! ";
 		std::cout << "Impossible to add another one..." << std::endl;
+		return;
 	}
-	else {
-		std::cout << "\nGive following informations to add a contact" << std::endl;
-		std::cout << "first name: ";
-		std::getline (std::cin, first_name);
-		std::cout << "last name: ";
-		std::getline (std::cin, last_name);
-		std::cout << "nickname: ";
-		std::getline (std::cin, nickname);
-		std::cout << "phone number: ";
-		std::getline (std::cin, phone_number);
-		std::cout << "darkest_secret: ";
-		std::getline (std::cin, darkest_secret);
-		std::cout << first_name << " " << last_name << " " << nickname << " ";
-		std::cout << phone_number << " " << darkest_secret << std::endl;
-	}
+	contacts[nbContacts].addInfos();
+	nbContacts++;
 
 }
 
 void	PhoneBook::searchContact( void ) {
 
-	std::string	search;
+	unsigned	search;
 
 	if (nbContacts == 0) {
 		std::cout << "No contact in your awesome phonebook!!!" << std::endl;
 		return;
 	}
-	std::cout << "\nWich contact?" << std::endl;
-	std::getline (std::cin, search);
-	std::cout << search << std::endl;
+	chooseContact();
+	std::cout << "\nWich index?" << std::endl;
+	std::cin >> search;
+	if (search < 0 || search > nbContacts - 1) {
 
+		std::cout << "Index [" << search << "] is out of range! " << std::endl;
+		std::cout << "Please choose an index between 0 and " << nbContacts - 1 << std::endl;
+
+	}
+	else
+		contacts[search].getInfos();
+	std::cin.clear();
+
+}
+
+void	PhoneBook::chooseContact( void ) {
+
+	std::cout << "index | ";
+	for (unsigned i = 0; i < 3; i++) {
+
+		std::cout << contacts[0].categorie[i];
+		if (i < 2)
+			std::cout << " | ";
+
+	}
+	std::cout << std::endl;
+
+	for (unsigned i = 0; i < nbContacts; i++) {
+
+		std::cout << i << " | ";
+		for (unsigned j = 0; j < 3; j++) {
+			
+			std::cout << contacts[i].info[j];
+			if (j < 2)
+				std::cout << " | ";
+
+		}
+		std::cout << std::endl;
+	}
 }
