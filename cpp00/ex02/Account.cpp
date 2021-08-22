@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 16:53:18 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/22 17:50:06 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/22 18:47:58 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 void	Account::_displayTimestamp( void) {
 
 	std::time_t	ts = std::time(nullptr);
+	tm			ts_struct = *std::localtime(&ts);
 	
-	std::cout << "[" << ts << "] ";
+	std::cout << std::put_time(&ts_struct, "[%Y%m%d_%H%M%S] ";
 
 }
 
