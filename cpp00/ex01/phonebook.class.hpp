@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 23:43:32 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/20 22:26:47 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/22 19:14:24 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
 
 	static const unsigned	maxContacts = 8;
 	unsigned				nbContacts;
+	unsigned				oldestContactIndex;
 	Contact					contacts[8];
 
 	PhoneBook( void );

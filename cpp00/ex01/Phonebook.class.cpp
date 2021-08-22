@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 18:25:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/22 16:39:29 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/22 19:44:46 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 PhoneBook::PhoneBook( void ) {
 
 	nbContacts = 0;
+	oldestContactIndex = 0;
 
 }
 
@@ -28,8 +29,15 @@ void	PhoneBook::addContact( void ) {
 
 	unsigned	index = nbContacts;
 
-	if (nbContacts == maxContacts)
-		index = 0;
+	if (nbContacts == maxContacts) {
+
+		index = oldestContactIndex;
+		if (oldestContactIndex >= 7)
+			oldestContactIndex = 0;
+		else
+			oldestContactIndex++;
+
+	}
 	contacts[index].addInfos();
 	if (nbContacts < 8)
 		nbContacts++;
