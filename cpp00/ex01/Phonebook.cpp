@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.class.cpp                                :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 18:25:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/22 19:44:46 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/23 12:49:59 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.class.hpp"
+#include "Phonebook.hpp"
 
 PhoneBook::PhoneBook( void ) {
 

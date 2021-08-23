@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.class.hpp                                :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 23:43:32 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/22 19:14:24 by aldubar          ###   ########.fr       */
+/*   Created: 2021/08/19 00:01:08 by aldubar           #+#    #+#             */
+/*   Updated: 2021/08/20 18:54:55 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#ifndef CONTACT_CLASS_HPP
+# define CONTACT_CLASS_HPP
 
 # include <iostream>
-# include <iomanip>
 # include <string>
-# include "Contact.class.hpp"
 
-class	PhoneBook {
+class	Contact {
 
 public:
 
-	static const unsigned	maxContacts = 8;
-	unsigned				nbContacts;
-	unsigned				oldestContactIndex;
-	Contact					contacts[8];
+	static const std::string	categorie[5];
+	std::string					info[5];
 
-	PhoneBook( void );
-	~PhoneBook( void );
+	Contact( void );
+	~Contact( void );
 
-	void					addContact( void );
-	void					searchContact( void );
-	void					chooseContact( void );
+	void	addInfos( void );
+	void	getInfos( void );
 
 };
 

@@ -6,13 +6,13 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/08/20 17:46:36 by aldubar          ###   ########.fr        #
+#    Updated: 2021/08/23 12:49:08 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= phonebook
 
-SRCS		= main.cpp Phonebook.class.cpp Contact.class.cpp
+SRCS		= main.cpp Phonebook.cpp Contact.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 

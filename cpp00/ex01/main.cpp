@@ -6,11 +6,11 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 23:49:44 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/21 00:46:58 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/23 12:50:33 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.class.hpp"
+#include "Phonebook.hpp"
 
 int		main( void ) {
 

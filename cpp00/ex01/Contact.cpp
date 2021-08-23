@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.class.cpp                                  :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 00:01:47 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/21 00:40:26 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/23 12:49:38 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.class.hpp"
+#include "Contact.hpp"
 
 const std::string	Contact::categorie[5] = {"first name", "last name", "nickname", "phone number", "darkest secret"};
 
