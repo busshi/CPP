@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 10:35:50 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/26 22:10:28 by aldubar          ###   ########.fr       */
+/*   Created: 2021/08/26 23:13:38 by aldubar           #+#    #+#             */
+/*   Updated: 2021/08/26 23:48:03 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 #include <iostream>
 
-Zombie::Zombie( std::string name ) : _name(name) {}
+int		main( void ) {
 
-Zombie::~Zombie( void ) {
+		std::string		str = "HI THIS IS BRAIN";
+		std::string*	stringPTR = &str;
+		std::string&	stringREF = str;
 
-		std::cout << "<" << _name << "> is no more!" << std::endl;
+		std::cout << &str << std::endl;
+		std::cout << stringPTR << std::endl;
+		std::cout << &stringREF << std::endl;
+		std::cout << *stringPTR << std::endl;
+		std::cout << stringREF << std::endl;
 
-}
-
-void	Zombie::announce( void ) {
-
-		std::cout << "<" << _name << "> BraiiiiiiinnnzzzZ..." << std::endl;
+		return 0;
 
 }
