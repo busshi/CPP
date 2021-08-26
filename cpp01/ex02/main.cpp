@@ -6,11 +6,13 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 23:13:38 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/27 00:03:31 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/08/27 00:17:11 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string>
 #include <iostream>
+#include <iomanip>
 
 int		main( void ) {
 
@@ -18,11 +20,11 @@ int		main( void ) {
 		std::string*	stringPTR = &str;
 		std::string&	stringREF = str;
 
-		std::cout << "address of the string:\t\t" << &str << std::endl;
-		std::cout << "address by using pointer:\t" << stringPTR << std::endl;
-		std::cout << "address by using reference:\t" << &stringREF << std::endl;
-		std::cout << "string using pointer:\t\t" << *stringPTR << std::endl;
-		std::cout << "string using reference:\t\t" << stringREF << std::endl;
+		std::cout << std::left << std::setw(30) << "address of the string: " << &str << std::endl;
+		std::cout << std::left << std::setw(30) << "address by using pointer:" << stringPTR << std::endl;
+		std::cout << std::left << std::setw(30) << "address by using reference:" << &stringREF << std::endl;
+		std::cout << std::left << std::setw(30) << "string using pointer:" << *stringPTR << std::endl;
+		std::cout << std::left << std::setw(30) << "string using reference:" << stringREF << std::endl;
 
 		return 0;
 
