@@ -6,13 +6,13 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/08/27 00:09:17 by aldubar          ###   ########.fr        #
+#    Updated: 2021/08/27 11:13:04 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= unnecessaryViolence
 
-SRCS		= main.cpp
+SRCS		= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
