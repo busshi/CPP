@@ -6,7 +6,7 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/08/30 14:10:36 by aldubar          ###   ########.fr        #
+#    Updated: 2021/08/31 00:17:46 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS		= main.cpp Karen.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
-FLAGS		= -Wall -Wextra -Werror -g
+FLAGS		= -Wall -Wextra -Werror
 
 CC			= @clang++
 

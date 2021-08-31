@@ -6,11 +6,11 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/08/30 21:36:48 by aldubar          ###   ########.fr        #
+#    Updated: 2021/08/31 15:24:50 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= myFirstOrthodox
+NAME		= fixedPoint
 
 SRCS		= main.cpp Fixed.cpp
 
