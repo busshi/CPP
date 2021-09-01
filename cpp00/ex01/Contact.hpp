@@ -6,28 +6,32 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 00:01:08 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/20 18:54:55 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/01 23:31:26 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_HPP
-# define CONTACT_CLASS_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-# include <iostream>
-# include <string>
+#include <string>
 
 class	Contact {
 
-public:
+private:
 
-	static const std::string	categorie[5];
-	std::string					info[5];
+	std::string					_info[5];
+	static const std::string	_categorie[5];
+
+
+public:
 
 	Contact( void );
 	~Contact( void );
 
 	void	addInfos( void );
 	void	getInfos( void );
+	void	displayCategorie( unsigned i );
+	void	displayInfo( unsigned i );
 
 };
 

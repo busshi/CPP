@@ -6,26 +6,25 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 23:43:32 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/23 17:53:36 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/01 23:29:21 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include <iostream>
-# include <iomanip>
-# include <string>
 # include "Contact.hpp"
 
 class	PhoneBook {
 
-public:
+private:
 
-	static const unsigned	maxContacts = 8;
-	unsigned				nbContacts;
-	unsigned				oldestContactIndex;
-	Contact					contacts[8];
+	static const unsigned	_maxContacts = 8;
+	unsigned				_nbContacts;
+	unsigned				_oldestContactIndex;
+	Contact					_contacts[8];
+
+public:
 
 	PhoneBook( void );
 	~PhoneBook( void );
