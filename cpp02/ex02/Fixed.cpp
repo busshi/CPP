@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 21:42:10 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/02 10:57:50 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/02 23:07:28 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,42 +16,40 @@
 
 Fixed::Fixed( void ) : _fixedPoint( 0 ) {
 
-	return;
+	std::cout << "Default constructor called" << std::endl;
 
 }
 
 Fixed::Fixed( Fixed const & src ) {
 
+	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
-
-	return;
 
 }
 
 Fixed::Fixed( int const n ) {
 
+	std::cout << "Int constructor called" << std::endl;
 	this->_fixedPoint = n << this->_fractionalBits;
-
-	return;
 
 }
 
 Fixed::Fixed( float const f ) {
 
+	std::cout << "Float constructor called" << std::endl;
 	this->_fixedPoint = roundf( f * ( 1 << this->_fractionalBits ) );
-
-	return;
 
 }
 
 Fixed::~Fixed( void ) {
 
-	return;
+	std::cout << "Destructor called" << std::endl;
 
 }
 
 Fixed &	Fixed::operator=( Fixed const & rhs ) {
 
+	std::cout << "Assignation operator called" << std::endl;
 	if (this != &rhs)
 		this->_fixedPoint = rhs.getRawBits();
 
@@ -193,12 +191,15 @@ Fixed &		Fixed::max( Fixed &a, Fixed &b ) {
 
 int		Fixed::getRawBits( void ) const {
 
+	std::cout << "getRawBits member function called" << std::endl;
+
 	return this->_fixedPoint;
 
 }
 
 void	Fixed::setRawBits( int const raw ) {
 
+	std::cout << "setRawBits member function called" << std::endl;
 	this->_fixedPoint = raw;
 
 }

@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 21:42:10 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/30 23:39:55 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/02 23:08:04 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,12 @@ Fixed::Fixed( void ) : _fixedPoint( 0 ) {
 
 	std::cout << "Default constructor called" << std::endl;
 
-	return;
-
 }
 
 Fixed::Fixed( Fixed const & src ) {
 
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
-
-	return;
 
 }
 

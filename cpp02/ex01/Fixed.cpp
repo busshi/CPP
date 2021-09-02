@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 21:42:10 by aldubar           #+#    #+#             */
-/*   Updated: 2021/08/31 00:06:44 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/02 23:07:51 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@ Fixed::Fixed( void ) : _fixedPoint( 0 ) {
 
 	std::cout << "Default constructor called" << std::endl;
 
-	return;
-
 }
 
 Fixed::Fixed( Fixed const & src ) {
 
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
-
-	return;
 
 }
 
@@ -36,8 +32,6 @@ Fixed::Fixed( int const n ) {
 	std::cout << "Int constructor called" << std::endl;
 	this->_fixedPoint = n << this->_fractionalBits;
 
-	return;
-
 }
 
 Fixed::Fixed( float const f ) {
@@ -45,15 +39,11 @@ Fixed::Fixed( float const f ) {
 	std::cout << "Float constructor called" << std::endl;
 	this->_fixedPoint = roundf( f * ( 1 << this->_fractionalBits ) );
 
-	return;
-
 }
 
 Fixed::~Fixed( void ) {
 
 	std::cout << "Destructor called" << std::endl;
-
-	return;
 
 }
 
