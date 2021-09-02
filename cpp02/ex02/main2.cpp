@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 21:36:56 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/01 22:23:27 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/02 11:02:49 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ int	main( void ) {
 	Fixed		a;
 	Fixed const	b( Fixed( 5.05f ) * Fixed( 2 ) );
 	Fixed const	c( Fixed( 5.05f ) / Fixed( 2 ) );
-	float		f = 11.5f;
-	Fixed		d = f++;
-	Fixed		e = ++f;
-	Fixed 		g = 11.11f;
+	Fixed const	d( Fixed( 5.05f ) + Fixed( 2 ) );
+	Fixed const	e( Fixed( 5.05f ) - Fixed( 2 ) );
 
 	std::cout << a << std::endl;
 	std::cout << ++a << std::endl;
@@ -40,12 +38,25 @@ int	main( void ) {
 	std::cout << d << std::endl;
 	std::cout << e << std::endl;
 
-	std::cout << f << std::endl;
-	std::cout << g << std::endl;
-	std::cout << Fixed( f ) << std::endl;
+	if ( Fixed( 2 < 1 ) == 0 )
+		std::cout << "2 is greater than 1" << std::endl;
+	else
+		std::cout << "2 is not greater than 1" << std::endl;
 
-	if (Fixed::>( g ))
-		std::cout << "ok" << std::endl;
+	if ( Fixed( 2 > 1 ) == 1 )
+		std::cout << "2 is greater than 1" << std::endl;
+	else
+		std::cout << "2 is not greater than 1" << std::endl;
+
+	if ( Fixed( 2.01f == 2.01f ) == 1 )
+		std::cout << "2.01 is equal to 2.01" << std::endl;
+	else
+		std::cout << "2.01 is not equal to 2.01" << std::endl;
+
+	if ( Fixed( 3.1234f == 3.123f ) == 0 )
+		std::cout << "3.1234 is not equal to 3.123" << std::endl;
+	else
+		std::cout << "3.1234 is equal to 3.123" << std::endl;
 
 	return 0;
 

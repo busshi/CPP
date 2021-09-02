@@ -6,13 +6,13 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/08/31 16:22:05 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/02 11:03:20 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= fixedPoint
 
-SRCS		= main2.cpp Fixed.cpp
+SRCS		= main.cpp Fixed.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
