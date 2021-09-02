@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 22:23:08 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/02 22:41:35 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/02 22:45:47 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ FragTrap &	FragTrap::operator=( FragTrap const & rhs ) {
 
 void		FragTrap::highFivesGuys( void ) {
 
-	std::cout << "🖐" << std::endl;
+	std::cout << "🖐  Gimme 5 🖐" << std::endl;
 
 }
