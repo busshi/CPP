@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 11:20:04 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/02 16:11:34 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/02 16:14:42 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int		main( void ) {
 
 	ClapTrap	fighter("figther");
-	ClapTrap	unknownGuy("nobody");
 	ClapTrap	anonymous;
 
 	std::cout << std::endl;
@@ -24,18 +23,6 @@ int		main( void ) {
 	fighter.attack("evil");
 	fighter.takeDamage(5);
 	fighter.beRepaired(5);
-
-	std::cout << std::endl;
-
-	fighter.attack("angel");
-	fighter.takeDamage(1);
-	fighter.beRepaired(100);
-
-	std::cout << std::endl;
-
-	unknownGuy.attack("noone");
-	unknownGuy.takeDamage(0);
-	unknownGuy.beRepaired(0);
 
 	std::cout << std::endl;
 
