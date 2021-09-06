@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 11:20:04 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/06 10:22:16 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/06 15:57:55 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ void	diamond( void ) {
 
 	DiamondTrap	gold("gold");
 
+	std::cout << std::endl;
 	gold.attack("a jewel");
 	gold.takeDamage(100000);
 	gold.beRepaired(999999);
