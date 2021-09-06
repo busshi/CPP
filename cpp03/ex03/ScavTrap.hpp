@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 16:15:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/02 21:53:57 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/06 09:22:37 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class	ScavTrap : public ClapTrap {
+class	ScavTrap : virtual public ClapTrap {
 
 	public:
 			ScavTrap( std::string const & name = "default ScavTrap" );

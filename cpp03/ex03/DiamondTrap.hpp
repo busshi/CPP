@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/02 22:19:02 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/06 09:22:16 by aldubar          ###   ########.fr       */
+/*   Created: 2021/09/03 09:38:41 by aldubar           #+#    #+#             */
+/*   Updated: 2021/09/06 09:24:52 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-# include "ClapTrap.hpp"
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
+# include <iostream>
 
-class	FragTrap : virtual public ClapTrap {
+class	DiamondTrap : public FragTrap, public ScavTrap {
 
 		public:
-				FragTrap( std::string const & name = "default ClapTrap" );
-				FragTrap( FragTrap const & src );
-				~FragTrap( void );
+				DiamondTrap( std::string const & name = "default DiamondTrap" );
+				DiamondTrap( DiamondTrap const & src );
+				~DiamondTrap( void );
 
-				FragTrap &	operator=( FragTrap const & rhs );
+				DiamondTrap &	operator=( DiamondTrap const & rhs );
 
-				void		highFivesGuys( void );
+				void			whoAmI( void );				
 
 };
 

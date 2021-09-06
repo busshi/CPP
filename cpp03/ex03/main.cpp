@@ -6,13 +6,14 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 11:20:04 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/02 22:51:33 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/03 10:03:03 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 
 void	clap( void ) {
@@ -93,6 +94,17 @@ void	frag( void) {
 
 }
 
+void	diamond( void ) {
+
+	DiamondTrap	gold("gold");
+
+	gold.attack("a jewel");
+	gold.takeDamage(100000);
+	gold.beRepaired(999999);
+	gold.whoAmI();
+	std::cout << std::endl;
+}
+
 int		main( void ) {
 
 	std::cout << "--- Testing CLAPTRAP ---" << std::endl << std::endl;
@@ -103,6 +115,9 @@ int		main( void ) {
 
 	std::cout << std::endl << "--- Testing FRAGTRAP ---" << std::endl << std::endl;
 	frag();
+
+	std::cout << std::endl << "--- Testing DIAMONDTRAP ---" << std::endl << std::endl;
+	diamond();
 
 	return 0;
 }

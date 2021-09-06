@@ -6,13 +6,13 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/02 22:54:51 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/03 10:02:23 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= diamondTrap
 
-SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
