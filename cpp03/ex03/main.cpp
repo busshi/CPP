@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 11:20:04 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/03 10:03:03 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/06 10:22:16 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,8 @@ void	diamond( void ) {
 	gold.takeDamage(100000);
 	gold.beRepaired(999999);
 	gold.whoAmI();
+	gold.highFivesGuys();
+	gold.guardGate();
 	std::cout << std::endl;
 }
 

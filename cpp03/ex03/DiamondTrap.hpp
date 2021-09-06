@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 09:38:41 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/06 09:24:52 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/06 10:17:57 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <iostream>
 
 class	DiamondTrap : public FragTrap, public ScavTrap {
+
+		private:
+				std::string	_name;
 
 		public:
 				DiamondTrap( std::string const & name = "default DiamondTrap" );

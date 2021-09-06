@@ -6,7 +6,7 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/02 21:56:31 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/06 09:58:08 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,11 @@ NAME		= scavTrap
 
 SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp
 
+HEADER		= ClapTrap.hpp ScavTrap.hpp
+
 OBJS		= $(SRCS:.cpp=.o)
 
-FLAGS		= -Wall -Wextra -Werror
+FLAGS		= -Wall -Wextra -Werror -std=c++98
 
 CC			= @clang++
 
@@ -24,7 +26,7 @@ RM			= @rm -f
 
 OK			= "\r[ \033[0;32mok\033[0m ]"
 
-%.o:%.cpp
+%.o:%.cpp $(HEADER)
 		$(CC) $(FLAGS) $< -c -o $@
 			
 all:		$(NAME)
