@@ -6,7 +6,7 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/06 15:56:33 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/06 16:10:16 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEADER		= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
-FLAGS		= -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+FLAGS		= -Wall -Wextra -Werror -Wshadow -std=c++98
 
 CC			= @clang++
 
