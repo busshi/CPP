@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:24:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/08 00:11:08 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/08 00:16:54 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,12 @@ int	main() {
 	std::cout << "new Animal: " << wCat->getType() << std::endl;
 	wCat->makeSound();
 	delete wCat;
+	std::cout << std::endl;
+
+	const WrongAnimal*	wrongAnimal = new WrongCat();
+	std::cout << "new Animal: " << wrongAnimal->getType() << std::endl;
+	wrongAnimal->makeSound();
+	delete wrongAnimal;
 
 	return 0;
 

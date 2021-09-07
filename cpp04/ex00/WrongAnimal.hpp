@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 23:36:23 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/07 23:53:37 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/08 00:17:36 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class	WrongAnimal {
 	public:
 		WrongAnimal( void );
 		WrongAnimal( WrongAnimal const & src );
-		~WrongAnimal( void );
+		virtual ~WrongAnimal( void );
 
 		WrongAnimal &	operator=( WrongAnimal const & rhs );
 
