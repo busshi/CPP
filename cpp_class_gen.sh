@@ -1,6 +1,5 @@
 #!/bin/bash
 
-[ -z "$1" ] && { echo "Usage: ./class_gen.sh [ClassName]"; exit 1; }
 
 check()
 {
@@ -13,7 +12,7 @@ file="${class}.hpp"
 [ -f $file ] && { echo "File $file already exists!"; exit 1; }
 class_maj=$( echo $class | tr '[:lower:]' '[:upper:]' )
 vim -c Stdheader -c wq $file
-sed -i '$ d' "$file"
+sed -i ".bak" '$d' "$file" && rm -f "${file}.bak"
 echo -e "#ifndef ${class_maj}_HPP\n# define ${class_maj}_HPP" >> $file
 echo -e "\nclass\t${class} {\n\n\tpublic:\n\t\t${class}( void );" >> $file
 echo -e "\t\t${class}( ${class} const & src );" >> $file
@@ -30,7 +29,7 @@ gen_cpp()
 file="${class}.cpp"
 [ -f $file ] && { echo "File $file already exists!"; exit 1; }
 vim -c Stdheader -c wq $file
-sed -i '$d' "$file"
+sed -i ".bak" '$d' "$file" && rm -f "${file}.bak"
 echo -e "#include \"${class}.hpp\"\n#include <iostream>" >> $file
 echo -e "\n${class}::${class}( void ) {\n\n\tstd::cout << \"Default constructor called\" << std::endl;\n\n}" >> $file
 echo -e "\n${class}::${class}( ${class} const & src ) {\n\n\tstd::cout << \"Copy constructor called\" << std::endl;\n\n\t*this = src;\n\n}" >> $file
@@ -39,9 +38,15 @@ echo -e "\n${class} &\t${class}::operator=( ${class} const & rhs ) {\n\n\tstd::c
 check
 }
 
-for class in "$@" ; do
+if [ -z "$1" ] ; then
+	read -p "Which class? " class
 	gen_hpp
 	gen_cpp
-done
+else
+	for class in "$@" ; do
+		gen_hpp
+		gen_cpp
+	done
+fi
 
 exit 0
