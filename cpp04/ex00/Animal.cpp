@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:22:23 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/07 19:40:07 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/08 00:03:01 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Animal &	Animal::operator=( Animal const & rhs ) {
 
 void		Animal::makeSound( void ) const {
 
-	std::cout << "Unknown animal sound" << std::endl;
+	std::cout << "Unknown Animal sound" << std::endl;
 
 }
 

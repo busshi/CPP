@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:22:23 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/07 19:35:04 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/08 00:01:48 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 Cat::Cat( void ) : Animal() {
 
 	std::cout << "Cat default constructor called" << std::endl;
+
+	this->_type = "Cat";
 
 }
 
