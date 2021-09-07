@@ -6,11 +6,13 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:24:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/07 15:26:10 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/07 19:37:26 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include <iostream>
 
 int	main() {
