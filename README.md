@@ -24,4 +24,4 @@
 
 ## CPP Module 08
 [![aldubar's 42Project Score](https://badge42.herokuapp.com/api/project/aldubar/CPP%20Module%2008)](https://github.com/JaeSeoKim/badge42)
-s
+
