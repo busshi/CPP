@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 22:19:02 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/02 22:36:20 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/07 14:47:36 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class	FragTrap : public ClapTrap {
+class	FragTrap : virtual public ClapTrap {
 
 		public:
 				FragTrap( std::string const & name = "default ClapTrap" );
