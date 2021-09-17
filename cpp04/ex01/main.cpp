@@ -20,22 +20,43 @@
 int	main() {
 	
     const Animal*		meta = new Animal();
+
 	std::cout << "new Animal: " << meta->getType() << std::endl;
 	meta->makeSound();
 	delete meta;
 	std::cout << std::endl;
 
     const Animal*		j = new Dog();
+
 	std::cout << "new Animal: " << j->getType() << std::endl;
 	j->makeSound();
 	delete j;
 	std::cout << std::endl;
 
     const Animal*		i = new Cat();
+
 	std::cout << "new Animal: " << i->getType() << std::endl;
 	i->makeSound();
 	delete i;
 	std::cout << std::endl;
+
+	std::cout << "Creating an array of half dogs half cats..." << std::endl << std::endl;
+
+	Animal *		array[4];
+	for (int i = 0; i < 4; i++) {
+
+		if (i % 2)
+			array[i] = new Cat;
+		else
+			array[i] = new Dog;
+		
+		std::cout << array[i]->_brain << std::endl;
+	}
+
+	for (int i = 0; i < 4; i++) {
+
+		delete array[i];
+	}
 
 	return 0;
 

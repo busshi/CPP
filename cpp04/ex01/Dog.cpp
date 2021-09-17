@@ -41,8 +41,11 @@ Dog &	Dog::operator=( Dog const & rhs ) {
 
 	std::cout << "Dog assignation operator called" << std::endl;
 
-	if (this != &rhs)
+	if (this != &rhs) {
+
 		this->_type = rhs._type;
+		*this->_brain = *rhs._brain;
+	}
 
 	return *this;
 
