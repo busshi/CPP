@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:24:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/15 01:29:18 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/20 11:06:59 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,40 @@ int	main() {
 		else
 			array[i] = new Dog;
 		
-		std::cout << array[i]->_brain << std::endl;
+		std::cout << std::endl;
 	}
+
+
+	std::cout << std::endl << "Testing deep copy of Cat..." << std::endl << std::endl;
+
+	Cat originalCat;
+
+	std::cout << std::endl << "Copying the original Cat..." << std::endl << std::endl;
+
+	Cat	copyCat(originalCat);
+
+	std::cout << std::endl << originalCat.getBrain() << " <--- ORIGINAL CAT VS COPY CAT ---> ";
+	std::cout << copyCat.getBrain() << std::endl << std::endl;
+
+
+	std::cout << std::endl << "Testing deep copy of Dog..." << std::endl << std::endl;
+
+	Dog originalDog;
+
+	std::cout << std::endl << "Copying the original Dog..." << std::endl << std::endl;
+	
+	Dog	copyDog(originalDog);
+
+	std::cout << std::endl << originalDog.getBrain() << " <--- ORIGINAL DOG VS COPY DOG ---> ";
+	std::cout << copyDog.getBrain() << std::endl << std::endl;
+
+
+	std::cout << "Deleting the array of half dogs half cats..." << std::endl << std::endl;
 
 	for (int i = 0; i < 4; i++) {
 
 		delete array[i];
+		std::cout << std::endl;
 	}
 
 	return 0;

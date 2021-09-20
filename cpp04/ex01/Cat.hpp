@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:22:23 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/14 11:34:36 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/20 10:28:03 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ class	Cat : public Animal {
 		Cat &	operator=( Cat const & rhs );
 
 		void	makeSound( void ) const;
+		Brain*	getBrain( void );
 
-//	private:
+	private:
 		Brain*	_brain;
 
 };

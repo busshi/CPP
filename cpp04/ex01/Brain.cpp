@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 11:25:43 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/14 11:39:41 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/20 10:22:50 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 Brain::Brain( void ) {
 
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Brain default constructor called" << std::endl;
 
 }
 
 Brain::Brain( Brain const & src ) {
 
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Brain copy constructor called" << std::endl;
 
 	*this = src;
 
@@ -29,13 +29,13 @@ Brain::Brain( Brain const & src ) {
 
 Brain::~Brain( void ) {
 
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Brain destructor called" << std::endl;
 
 }
 
 Brain &	Brain::operator=( Brain const & rhs ) {
 
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Brain assignation operator called" << std::endl;
 
 	if (this != &rhs) {
 

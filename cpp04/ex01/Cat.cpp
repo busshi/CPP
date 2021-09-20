@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:22:23 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/14 11:32:36 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/20 11:03:36 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat( void ) : Animal(), _brain( new Brain() ) {
 
 }
 
-Cat::Cat( Cat const & src ) {
+Cat::Cat( Cat const & src ) : Animal(), _brain( new Brain() ) {
 
 	std::cout << "Cat copy constructor called" << std::endl;
 
@@ -54,5 +54,11 @@ Cat &	Cat::operator=( Cat const & rhs ) {
 void	Cat::makeSound( void ) const {
 
 	std::cout << "Miaou miaou" << std::endl;
+
+}
+
+Brain*	Cat::getBrain( void ) {
+
+	return this->_brain;
 
 }
