@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:24:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/20 12:06:18 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/20 16:41:30 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,21 @@
 int	main() {
 
 //	Uncomment the next line to verify that Animal is an abstract Class
-//    const Animal*		meta = new Animal();
+//	Animal		animal;
 
-    const Animal*		j = new Dog();
+	Cat		cat;
+	Animal	*animal = &cat;
 
-	std::cout << "new Animal: " << j->getType() << std::endl;
-	j->makeSound();
-	delete j;
+	std::cout << "new Animal: " << animal->getType() << std::endl;
+	animal->makeSound();
 	std::cout << std::endl;
 
-    const Animal*		i = new Cat();
+	Dog		dog;
+	animal = &dog;
 
-	std::cout << "new Animal: " << i->getType() << std::endl;
-	i->makeSound();
-	delete i;
+	std::cout << "new Animal: " << animal->getType() << std::endl;
+	animal->makeSound();
+	std::cout << std::endl;
 
 	return 0;
 

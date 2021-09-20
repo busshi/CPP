@@ -31,10 +31,10 @@ file="${class}.cpp"
 vim -c Stdheader -c wq $file
 sed -i '$d' "$file"
 echo -e "#include \"${class}.hpp\"\n#include <iostream>" >> $file
-echo -e "\n${class}::${class}( void ) {\n\n\tstd::cout << \"Default constructor called\" << std::endl;\n\n}" >> $file
-echo -e "\n${class}::${class}( ${class} const & src ) {\n\n\tstd::cout << \"Copy constructor called\" << std::endl;\n\n\t*this = src;\n\n}" >> $file
-echo -e "\n${class}::~${class}( void ) {\n\n\tstd::cout << \"Destructor called\" << std::endl;\n\n}" >> $file
-echo -e "\n${class} &\t${class}::operator=( ${class} const & rhs ) {\n\n\tstd::cout << \"Assignation operator called\" << std::endl;\n\n\tif (this != &rhs)\n\t\tthis-> = rhs.;\n\n\treturn *this;\n\n}" >> $file
+echo -e "\n${class}::${class}( void ) {\n\n\tstd::cout << \"${class} Default constructor called\" << std::endl;\n\n}" >> $file
+echo -e "\n${class}::${class}( ${class} const & src ) {\n\n\tstd::cout << \"${class} Copy constructor called\" << std::endl;\n\n\t*this = src;\n\n}" >> $file
+echo -e "\n${class}::~${class}( void ) {\n\n\tstd::cout << \"${class} Destructor called\" << std::endl;\n\n}" >> $file
+echo -e "\n${class} &\t${class}::operator=( ${class} const & rhs ) {\n\n\tstd::cout << \"${class} Assignation operator called\" << std::endl;\n\n\tif (this != &rhs)\n\t\tthis-> = rhs.;\n\n\treturn *this;\n\n}" >> $file
 check
 }
 
