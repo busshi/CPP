@@ -6,7 +6,7 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/20 11:42:34 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/20 11:52:12 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEADER		= Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
-FLAGS		= -Wall -Wextra -Werror -g -std=c++98
+FLAGS		= -Wall -Wextra -Werror -std=c++98
 
 CC			= @clang++
 

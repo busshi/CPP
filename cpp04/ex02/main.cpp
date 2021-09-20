@@ -6,23 +6,18 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:24:26 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/20 11:51:05 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/20 12:06:18 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include <iostream>
 
 int	main() {
-	
-/*    const Animal*		meta = new Animal();
 
-	std::cout << "new Animal: " << meta->getType() << std::endl;
-	meta->makeSound();
-	delete meta;
-	std::cout << std::endl;*/
+//	Uncomment the next line to verify that Animal is an abstract Class
+//    const Animal*		meta = new Animal();
 
     const Animal*		j = new Dog();
 
