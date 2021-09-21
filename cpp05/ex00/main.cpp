@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 09:54:06 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/21 14:20:57 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/21 14:52:47 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_error( std::exception & e ) {
 
-	std::cout << e.what() << std::endl;
+	std::cout << "\033[31m" << e.what() << "\033[0m" << std::endl;
 
 }
 
@@ -84,39 +84,34 @@ void	testingHighException( void ) {
 
 void	testingCreationException( void ) {
 
-	Bureaucrat *	gtMax = new Bureaucrat("Oldest Bureaucrat", 0);
-
 	try {
+		Bureaucrat *	gtMax = new Bureaucrat("Oldest Bureaucrat", 0);
 		std::cout << *gtMax << std::endl;
 	}
 	catch (std::exception & e) {
 		print_error(e);
 	}
 
-	delete gtMax;
-
-	Bureaucrat *	ltMin = new Bureaucrat("Youngest Bureaucrat", 151);
-
 	try {
+		Bureaucrat *	ltMin = new Bureaucrat("Youngest Bureaucrat", 151);
 		std::cout << *ltMin << std::endl;
 	}
 	catch (std::exception & e) {
 		print_error(e);
 	}
-
-	delete ltMin;
 }
 
 int		main( void ) {
 
+	std::cout << "\033[33mTesting Low Exception...\033[0m" << std::endl ;
 	testingLowException();
-
 	std::cout << std::endl;
 
+	std::cout << "\033[33mTesting High Exception...\033[0m" << std::endl ;
 	testingHighException();
-
 	std::cout << std::endl;
 
+	std::cout << "\033[33mTesting Creation Error...\033[0m" << std::endl ;
 	testingCreationException();
 
 

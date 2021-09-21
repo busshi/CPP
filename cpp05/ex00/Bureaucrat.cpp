@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 09:52:43 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/21 14:12:11 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/21 14:45:58 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,13 @@ void			Bureaucrat::decrementGrade( void ) {
 
 char const *	Bureaucrat::GradeTooLowException::what() const throw() {
 
-	return ("Error: cannot decrement grade! Already reached minimum grade!");
+	return ("Error: Grade cannot be greater than 150!");
 
 }
 
 char const *	Bureaucrat::GradeTooHighException::what() const throw() {
 
-	return ("Error: cannot increment grade! Already reached maximum grade!");
+	return ("Error: Grade cannot be lower than 1!");
 
 }
 
