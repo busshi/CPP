@@ -6,11 +6,12 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 09:52:43 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/21 16:27:37 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/21 16:35:56 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat( std::string const & name, int grade ): _name(name) {
 
@@ -70,15 +71,29 @@ void			Bureaucrat::decrementGrade( void ) {
 
 }
 
+void			Bureaucrat::signForm( Form & f ) {
+
+	try {
+
+		f.beSigned(*this);
+		std::cout << this->getName() << " signs " << f.getName() << std::endl;
+	}
+	catch (std::exception & e ) {
+
+		std::cout << this->getName() << " cannot sign " << f.getName() << " because " << e.what() << std::endl;
+	}
+
+}
+
 char const *	Bureaucrat::GradeTooLowException::what() const throw() {
 
-	return ("Error: Grade cannot be greater than 150!");
+	return ("Bureaucrat error: Grade cannot be greater than 150!");
 
 }
 
 char const *	Bureaucrat::GradeTooHighException::what() const throw() {
 
-	return ("Error: Grade cannot be lower than 1!");
+	return ("Bureaucrat error: Grade cannot be lower than 1!");
 
 }
 
