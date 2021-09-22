@@ -6,14 +6,13 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 13:33:45 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 14:17:25 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/22 15:51:51 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
-#include "Bureaucrat.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm( std::string const & target ): Form(target, _sign, _exec), _target(target) {}
+PresidentialPardonForm::PresidentialPardonForm( std::string const & target ): Form(target + "_PardonForm", _sign, _exec), _target(target) {}
 
 PresidentialPardonForm::PresidentialPardonForm( PresidentialPardonForm const & src ): Form(src), _target(src._target) {
 
@@ -29,9 +28,7 @@ PresidentialPardonForm &	PresidentialPardonForm::operator=( PresidentialPardonFo
 	return *this;
 }
 
-void	PresidentialPardonForm::execute( Bureaucrat const & executor ) const {
-
-	Form::execute(executor);
+void	PresidentialPardonForm::doExecute( void ) const {
 
 	std::cout << _target << " has been pardoned by Zafod Beeblebrox" << std::endl;
 

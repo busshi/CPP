@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 13:33:45 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 15:36:45 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/22 16:01:43 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-# define PRESIDENTIALPARDONFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 # include <string>
 # include "Form.hpp"
 
-class	PresidentialPardonForm: public Form {
+class	RobotomyRequestForm: public Form {
 
 	public:
-		PresidentialPardonForm( std::string const & target = "default PresidentialPardonForm" );
-		PresidentialPardonForm( PresidentialPardonForm const & src );
-		~PresidentialPardonForm( void );
+		RobotomyRequestForm( std::string const & target = "default RobotomyRequestForm" );
+		RobotomyRequestForm( RobotomyRequestForm const & src );
+		~RobotomyRequestForm( void );
 
-		PresidentialPardonForm &	operator=( PresidentialPardonForm const & rhs );
+		RobotomyRequestForm &	operator=( RobotomyRequestForm const & rhs );
 
 		void	doExecute( void ) const;
 
 	private:
-		static const int	_sign = 25;
-		static const int	_exec = 5;
+		static const int	_sign = 72;
+		static const int	_exec = 45;
 		std::string const	_target;
 };
 

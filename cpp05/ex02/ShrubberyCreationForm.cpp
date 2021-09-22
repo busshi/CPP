@@ -10,7 +10,6 @@
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
-#include "Bureaucrat.hpp"
 #include <iostream>
 #include <fstream>
 
@@ -32,9 +31,7 @@ ShrubberyCreationForm &	ShrubberyCreationForm::operator=( ShrubberyCreationForm 
 
 }
 
-void	ShrubberyCreationForm::execute( Bureaucrat const & executor ) const {
-
-	Form::execute(executor);
+void	ShrubberyCreationForm::doExecute( void ) const {
 
 	std::ofstream	ofs(getName().c_str());
 

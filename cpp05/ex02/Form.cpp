@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 09:52:43 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 00:29:13 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/22 15:42:54 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void				Form::execute( Bureaucrat const & executor ) const {
 	else if (!this->_isSigned)
 		throw Form::NotSignedException();
 
+	doExecute();
 }
 
 char const *		Form::GradeTooLowException::what() const throw() {
