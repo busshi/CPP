@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 09:54:06 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 18:27:10 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/22 19:33:31 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,35 @@
 
 int		main( void ) {
 
-	Intern	someRandomIntern;
-	Form *  scf;
-	Form *  rrf;
-	Form * 	ppf;
-	Form *	unknown;
+	Intern			someRandomIntern;
+	Bureaucrat *	b = new Bureaucrat("B.O.S.S.", 1);
 
 	std::cout << "\033[35m===> TESTING SHRUBBERY CREATION FORM\033[0m" << std::endl;
-	scf = someRandomIntern.makeForm("shrubbery creation", "Forest");
+	Form *	scf = someRandomIntern.makeForm("shrubbery creation", "Forest");
+	std::cout << *scf << std::endl;
+	b->signForm(*scf);
+	std::cout << *scf << std::endl;
+	b->executeForm(*scf);
 	std::cout << std::endl;
 
 	std::cout << "\033[35m===> TESTING ROBOTOMY REQUEST FORM\033[0m" << std::endl;
-	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	Form *	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	std::cout << *rrf << std::endl;
+	b->signForm(*rrf);
+	std::cout << *rrf << std::endl;
+	b->executeForm(*rrf);
 	std::cout << std::endl;
 
 	std::cout << "\033[35m===> TESTING PRESIDENTIAL PARDON FORM\033[0m" << std::endl;
-	ppf = someRandomIntern.makeForm("presidential pardon", "Sorry");
+	Form *	ppf = someRandomIntern.makeForm("presidential pardon", "Innocent Guy");
+	std::cout << *ppf << std::endl;
+	b->signForm(*ppf);
+	std::cout << *ppf << std::endl;
+	b->executeForm(*ppf);
+	std::cout << std::endl;
 
 	std::cout << "\033[35m===> TESTING UNKNOWN FORM\033[0m" << std::endl;
-	unknown = someRandomIntern.makeForm("random form", "Error");
+	Form *	unknown = someRandomIntern.makeForm("random form", "Error");
 
 	delete scf;
 	delete rrf;
