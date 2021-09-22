@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 14:58:15 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 00:29:35 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/22 14:04:38 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Bureaucrat;
 class	Form {
 
 	public:
-		Form( std::string const & name, int gradeToSign, int gradeToExecute );
+		Form( std::string const & name = "default form", int gradeToSign = 150, int gradeToExecute = 150 );
 		Form( Form const & src );
 		~Form( void );
 

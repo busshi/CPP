@@ -6,19 +6,14 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 09:54:06 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 12:55:55 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/22 14:02:11 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
-/*
-void	print_error( std::exception & e ) {
-
-	std::cout << "\033[31m" << e.what() << "\033[0m" << std::endl;
-
-}*/
+#include "PresidentialPardonForm.hpp"
 
 void	testingShrubbery( void ) {
 
@@ -26,7 +21,7 @@ void	testingShrubbery( void ) {
 	Bureaucrat *			secretary = new Bureaucrat("Secretary", 142);
 	ShrubberyCreationForm *	shrubbery = new ShrubberyCreationForm("asciiTreesForm");
 
-	std::cout << "\033[33mCreating a bureaucrat and a shrubbery form...\033[0m" << std::endl;
+	std::cout << "\033[33mCreating bureaucrats and a shrubbery form...\033[0m" << std::endl;
 	std::cout << *chief << std::endl;
 	std::cout << *secretary << std::endl;
 	std::cout << *shrubbery << std::endl;
@@ -46,10 +41,31 @@ void	testingShrubbery( void ) {
 	delete shrubbery;
 }
 
+void	testingPresidentialPardon( void ) {
+
+	Bureaucrat *				president = new Bureaucrat("President", 1);
+	Bureaucrat *				secretary = new Bureaucrat("Secretary in Chief", 26);
+	PresidentialPardonForm *	pardon = new PresidentialPardonForm("BEG_FOR_MERCY");
+
+	std::cout << "\033[33mCreating bureaucrats and a presidential pardon form...\033[0m" << std::endl;
+	std::cout << *president << std::endl;
+	std::cout << *secretary << std::endl;
+	std::cout << *pardon << std::endl;
+
+	delete president;
+	delete secretary;
+	delete pardon;
+}
+
 int		main( void ) {
 
 	std::cout << "\033[35m===> TESTING SHRUBBERY CREATION FORM\033[0m" << std::endl;
 	testingShrubbery();
+	std::cout << std::endl;
+
+	std::cout << "\033[35m===> TESTING PRESIDENTIAL PARDON FORM\033[0m" << std::endl;
+	testingPresidentialPardon();
+	std::cout << std::endl;
 
 	return 0;
 

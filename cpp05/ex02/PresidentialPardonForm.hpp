@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 20:14:37 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 13:38:59 by aldubar          ###   ########.fr       */
+/*   Created: 2021/09/22 13:33:45 by aldubar           #+#    #+#             */
+/*   Updated: 2021/09/22 14:01:27 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
-# include "Form.hpp"
 # include <string>
+# include "Form.hpp"
 
-class	ShrubberyCreationForm: public Form {
+class	PresidentialPardonForm: public Form {
 
 	public:
-		ShrubberyCreationForm( std::string const & target = "default ShrubberyCreationForm" );
-		ShrubberyCreationForm( ShrubberyCreationForm const & src );
-		virtual ~ShrubberyCreationForm( void );
+		PresidentialPardonForm( std::string const & target = "default PresidentialPardonForm" );
+		PresidentialPardonForm( PresidentialPardonForm const & src );
+		virtual ~PresidentialPardonForm( void );
 
-		ShrubberyCreationForm &	operator=( ShrubberyCreationForm const & rhs );
+		PresidentialPardonForm &	operator=( PresidentialPardonForm const & rhs );
 
 		void	execute( Bureaucrat const & executor ) const;
 
 	private:
-		static const int	_sign = 145;
-		static const int	_exec = 137;
+		static const int	_sign = 25;
+		static const int	_exec = 5;
 		std::string const	_target;
 };
 

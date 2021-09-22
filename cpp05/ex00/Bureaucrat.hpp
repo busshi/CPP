@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 09:52:43 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/21 16:27:03 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/22 14:13:58 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class	Bureaucrat {
 
 	public:
-		Bureaucrat( std::string const &name, int grade );
+		Bureaucrat( std::string const &name = "default Bureaucrat", int grade = 150 );
 		Bureaucrat( Bureaucrat const & src );
 		~Bureaucrat( void );
 
