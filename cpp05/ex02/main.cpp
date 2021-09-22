@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 09:54:06 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 00:43:18 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/22 12:55:55 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	testingShrubbery( void ) {
 
 	Bureaucrat *			chief = new Bureaucrat("Chief", 42);
 	Bureaucrat *			secretary = new Bureaucrat("Secretary", 142);
-	ShrubberyCreationForm *	shrubbery = new ShrubberyCreationForm("asciiArtForm");
+	ShrubberyCreationForm *	shrubbery = new ShrubberyCreationForm("asciiTreesForm");
 
 	std::cout << "\033[33mCreating a bureaucrat and a shrubbery form...\033[0m" << std::endl;
 	std::cout << *chief << std::endl;

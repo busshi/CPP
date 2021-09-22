@@ -26,8 +26,6 @@ ShrubberyCreationForm::~ShrubberyCreationForm( void ) {}
 
 ShrubberyCreationForm &	ShrubberyCreationForm::operator=( ShrubberyCreationForm const & rhs ) {
 
-//	if (this != &rhs)
-//		this->_target = rhs._target;
 	Form::operator=(rhs);
 
 	return *this;
@@ -47,13 +45,13 @@ void	ShrubberyCreationForm::execute( Bureaucrat const & executor ) const {
 	}
 	else {
 
-		ofs << "    ████╗      ██████╗" << std::endl;
-		ofs << "   ██╔██║     ██╔═══██╗" << std::endl;
-		ofs << "  ██╔╝██║     ╚═╝ ██╔═╝" << std::endl;
-		ofs << " ██╔╝ ██║       ██╔═╝" << std::endl;
-		ofs << "██████████╗   ██╔═╝ ██╗" << std::endl;
-		ofs << "╚═════██╔═╝   ████████║" << std::endl;
-		ofs << "      ╚═╝     ╚═══════╝" << std::endl;
+        ofs << "    ████╗         ████╗" << std::endl;
+        ofs << "   ██╔═██╗       ██╔═██╗" << std::endl;
+        ofs << "  ██╔╝  ██╗     ██╔╝  ██╗" << std::endl;
+        ofs << " ██╔╝    ██╗   ██╔╝    ██╗" << std::endl;
+        ofs << "████████████╗ ████████████╗" << std::endl;
+        ofs << "╚════██╔════╝ ╚════██╔════╝" << std::endl;
+        ofs << "     ╚═╝           ╚═╝" << std::endl;
 	}
 
 	ofs.close();
