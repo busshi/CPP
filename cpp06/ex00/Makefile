@@ -6,11 +6,11 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/23 13:08:07 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/23 22:44:33 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= scalarConversion
+NAME		= convert
 
 SRCS		= main.cpp ScalarConversion.cpp
 

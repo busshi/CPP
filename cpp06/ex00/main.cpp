@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 13:08:41 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/23 19:52:19 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/23 23:38:04 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ void	printChar( ScalarConversion sc ) {
 	std::cout << "char: ";
 
 	try {
+		
+		char	c = sc.toChar();
 
-		std::cout << sc.toChar() << std::endl;
+		if (c >= ' ' && c <= '~')
+			std::cout << "'" << c << "'" << std::endl;
 	}
 	catch (std::exception & e) {
 
