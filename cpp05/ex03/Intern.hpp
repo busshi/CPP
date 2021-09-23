@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 16:53:06 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/22 22:22:12 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/23 12:57:40 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,16 @@ class	Intern {
 
 	private:
 
-		typedef struct {
+		struct formTypes {
 			std::string name;
-			Form * (*createForm)(std::string const & name);
-		} formTypes;
+			Form * (Intern::*createForm)(std::string const & name);
+		};
+
+		static const	formTypes selectType[];
+
+		Form *	createShrubberyCreationForm( std::string const & target );
+		Form *	createRobotomyRequestForm( std::string const & target );
+		Form *	createPresidentialPardonForm( std::string const & target );
 
 };
 
