@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 13:09:32 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/23 23:43:58 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/24 14:41:01 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,41 +49,30 @@ char		ScalarConversion::toCharDigit( void ) {
 	catch (std::exception & e) {
 
 		throw ScalarConversion::impossibleException();
-		return 0;
 	}
-	
-	if (i < 0 || i > 127) {
 
+	if (i < 0 || i > 127)
 		throw ScalarConversion::impossibleException();
-		return 0;
-	}
 
-	if (i >= ' ' && i <= '~') 
+	if (isprint(i)) 
 		return static_cast<char>(i);
 
 	throw ScalarConversion::nonDisplayableException();
-	
-	return 0;
 }
 
 char		ScalarConversion::toCharNoDigit( void ) {
 
 	char c;
 
-	if (_literal.length() > 1) {
-
+	if (_literal.length() > 1)
 		throw ScalarConversion::impossibleException();
-		return 0;
-	}
 
 	c = static_cast<char>(_literal[0]);
 		
-	if (c >= ' ' && c <= '~')
+	if (isprint(c))
 		return c;
 
 	throw ScalarConversion::nonDisplayableException();
-	
-	return 0;
 }
 
 char		ScalarConversion::toChar( void ) {
@@ -113,12 +102,10 @@ int			ScalarConversion::toInt( void ) {
 			return static_cast<int>(i);
 
 		throw ScalarConversion::impossibleException();
-		return 0;
 	}
 	catch (std::exception & e) {
 
 		throw ScalarConversion::impossibleException();
-		return 0;
 	}
 }
 
@@ -134,7 +121,6 @@ float		ScalarConversion::toFloat( void ) {
 	catch (std::exception & e) {
 
 		throw ScalarConversion::impossibleException();
-		return 0;
 	}
 }
 
@@ -150,6 +136,5 @@ double		ScalarConversion::toDouble( void ) {
 	catch (std::exception & e){
 
 		throw ScalarConversion::impossibleException();
-		return 0;
 	}
 }
