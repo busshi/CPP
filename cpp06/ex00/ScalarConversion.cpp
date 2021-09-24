@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 13:09:32 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/24 14:41:01 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/24 21:22:43 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 #include <cstring>
 #include <limits>
 
-ScalarConversion::ScalarConversion( void ): _literal("defaut literal") {}
-
-ScalarConversion::ScalarConversion( std::string literal ): _literal(literal) {}
+ScalarConversion::ScalarConversion( double literal ): _literal(literal) {}
 
 ScalarConversion::ScalarConversion( ScalarConversion const & src ) {
 
@@ -33,108 +31,50 @@ ScalarConversion &	ScalarConversion::operator=( ScalarConversion const & rhs ) {
 	return *this;
 }
 
-std::string ScalarConversion::getLiteral( void ) const {
+double		ScalarConversion::getLiteral( void ) const {
 
 	return _literal;
 }
 
-char		ScalarConversion::toCharDigit( void ) {
+char		ScalarConversion::toChar( void ) const {
 
-	int		i;
+	int		c = static_cast<int>(_literal);
 
-	try {
-
-		i = toInt();
-	}			
-	catch (std::exception & e) {
-
-		throw ScalarConversion::impossibleException();
-	}
-
-	if (i < 0 || i > 127)
+	if (c < std::numeric_limits<char>::min() || c > std::numeric_limits<char>::max())
 		throw ScalarConversion::impossibleException();
 
-	if (isprint(i)) 
-		return static_cast<char>(i);
+	else if (!isprint(c))
+		throw ScalarConversion::nonDisplayableException();
 
-	throw ScalarConversion::nonDisplayableException();
+	return c;
 }
 
-char		ScalarConversion::toCharNoDigit( void ) {
+int				ScalarConversion::toInt( void ) const {
 
-	char c;
+	double	i = static_cast<double>(_literal);
 
-	if (_literal.length() > 1)
+	if (i < std::numeric_limits<int>::min() || i > std::numeric_limits<int>::max())
 		throw ScalarConversion::impossibleException();
-
-	c = static_cast<char>(_literal[0]);
-		
-	if (isprint(c))
-		return c;
-
-	throw ScalarConversion::nonDisplayableException();
+	
+	return static_cast<int>(i);
 }
 
-char		ScalarConversion::toChar( void ) {
+float			ScalarConversion::toFloat( void ) const {
 
-	bool	digit = true;
-
-	for (int i = 0; _literal[i]; i++) {
-
-		if (!(_literal[i] >= '0' && _literal[i] <= '9') && _literal[i] != '-' && _literal[i] != '.' && _literal[i] != 'f')
-			digit = false;
-	}
-
-	if (digit)
-		return toCharDigit();
-	else
-		return toCharNoDigit();
+	float	f = static_cast<float>(_literal);
+	 
+	if (f < -std::numeric_limits<float>::max() || f > std::numeric_limits<float>::max())
+		throw ScalarConversion::impossibleException();
+	
+	return f;
 }
 
-int			ScalarConversion::toInt( void ) {
+double			ScalarConversion::toDouble( void ) const {
 
-	double	i;
+	double	d = _literal;
 
-	try {
-
-		i = static_cast<double>(std::strtod(_literal.c_str(), NULL));
-		if (i >= std::numeric_limits<int>::min() && i <= std::numeric_limits<int>::max())
-			return static_cast<int>(i);
-
+	if (d < -std::numeric_limits<double>::max() || d > std::numeric_limits<double>::max())
 		throw ScalarConversion::impossibleException();
-	}
-	catch (std::exception & e) {
 
-		throw ScalarConversion::impossibleException();
-	}
-}
-
-float		ScalarConversion::toFloat( void ) {
-
-	float	f;
-
-	try {
-
-		f = static_cast<float>(std::strtof(_literal.c_str(), NULL));
-		return f;
-	}
-	catch (std::exception & e) {
-
-		throw ScalarConversion::impossibleException();
-	}
-}
-
-double		ScalarConversion::toDouble( void ) {
-
-	double	d;
-
-	try {
-
-		d = static_cast<double>(std::strtod(_literal.c_str(), NULL));
-		return d;
-	}
-	catch (std::exception & e){
-
-		throw ScalarConversion::impossibleException();
-	}
+	return d;
 }
