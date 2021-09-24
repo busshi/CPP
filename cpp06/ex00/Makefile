@@ -6,15 +6,15 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/24 20:20:24 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/24 21:47:34 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= convert
 
-SRCS		= main.cpp ScalarConversion.cpp
+SRCS		= main.cpp ScalarConversion.cpp printConvert.cpp
 
-HEADER		= ScalarConversion.hpp
+HEADER		= ScalarConversion.hpp printConvert.hpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
