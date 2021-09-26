@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 13:09:32 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/24 21:23:02 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/26 14:23:40 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,6 @@ class	ScalarConversion {
 		float	toFloat( void ) const;
 		double	toDouble( void ) const;
 
-		/*printChar( unsigned precision, enum e_pseudo pseudo );
-		printInt( unsigned precision, enum e_pseudo pseudo );
-		printFloat( unsigned precision, enum e_pseudo pseudo );
-		printDouble( unsigned precision, enum e_pseudo pseudo );
-
-		getPrecision();*/
-
-//		enum	pseudo { NON_PSEUDO, NAN, INF, NEG_INF };
-
 		class nonDisplayableException: public std::exception {
 
 			char const * what() const throw() { return ("Non displayable");}
@@ -54,7 +45,6 @@ class	ScalarConversion {
 
 	private:
 		double		_literal;
-//		unsigned	precision;
 };
 
 #endif
