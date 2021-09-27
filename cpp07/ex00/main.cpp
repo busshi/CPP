@@ -6,12 +6,31 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 11:24:33 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/27 12:03:39 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/27 12:10:28 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
 #include <iostream>
+
+void	testingGivenMain( void ) {
+
+	int		a = 2;
+	int		b = 3;
+
+	::swap( a, b );
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+
+	std::string	c = "chaine1";
+	std::string	d = "chaine2";
+
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+}
 
 void	testingInt( void ) {
 
@@ -19,7 +38,7 @@ void	testingInt( void ) {
 	int		b = 24;
 	int		c = 24;
 
-	std::cout << "\033[33mTesting Int...\033[0m" << std::endl;
+	std::cout << std::endl << "\033[33mTesting Int...\033[0m" << std::endl;
 	std::cout << "Min beween [ " << a << " ] and [ "<<  b << " ] is " << ::min(a, b) << std::endl;
 	std::cout << "Max beween [ " << a << " ] and [ "<<  b << " ] is " << ::max(a, b) << std::endl;
 
@@ -115,6 +134,7 @@ void	testingString( void ) {
 
 int		main( void ) {
 
+	testingGivenMain();
 	testingInt();
 	testingFloat();
 	testingDouble();
