@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 14:31:57 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/27 14:32:23 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/27 16:09:28 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 template< typename T >
 void	initArray( T & content ) {
 
-	content = 0;
+	content = 42;
+}
+
+template<>
+void	initArray( std::string & s ) {
+
+	s = "[default string]";
 }
 
 template< typename T >
@@ -29,12 +35,6 @@ template<typename T >
 void	incrementArray( T & content ) {
 
 	content++;
-}
-
-template< typename T >
-void	changeString( T & content ) {
-
-	content = "[changed string]";
 }
 
 #endif
