@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 14:36:35 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/27 16:13:01 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/27 19:42:26 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ class	Array {
 
 		T &		operator[]( unsigned int i ) {
 
-			if (i < 0 || i > _size)
+			if (i < 0 || i >= _size)
 				throw OutOfRangeException();
 			
 			return _array[i];
