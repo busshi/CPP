@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 14:35:06 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/27 20:12:13 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/27 21:49:26 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,19 +90,32 @@ void	testingAdditional() {
 	Array <std::string>	strArray(3);
 	Array <std::string>	strArray2(2);
 
-	std::cout << "First string array is full of: ";
+	std::cout << "strArray is full of: ";
 	for (int i = 0; i < 3; i++) {
 		strArray[i] = "[Hello] ";
 		std::cout << strArray[i];
 	}
 
+	std::cout << std::endl << std::endl << "\033[33mTesting operator =...\033[0m" << std::endl;
 	strArray2 = strArray;
-	std::cout << std::endl << "After copy, second string array is full of: ";
+
+	std::cout << "After copy, strArray2 is full of: ";
 	for (int i = 0; i < 3; i++) {
 		std::cout << strArray2[i];
 	}
 
-	std::cout << std::endl << std::endl << "\033[33mTesting operator [] and try to access to invalids indexes in the array...\033[0m" << std::endl;
+	std::cout << std::endl << std::endl << "\033[33mTesting copy constructor and check if content are the same...\033[0m" << std::endl;
+	Array <std::string>	strArray3(strArray);
+	for (int i = 0; i < 3; i++)
+		std::cout << strArray[i] << "<= strArray[i] vs strArray3[i] => " << strArray3[i] << std::endl;
+
+	std::cout << std::endl << "\033[33mTesting to change an array without modifying the other...\033[0m" << std::endl;
+	for (int i = 0; i < 3; i++) {
+		strArray3[i] = "[coucou] ";
+		std::cout << strArray[i] << "<= strArray[i] vs strArray3[i] => " << strArray3[i] << std::endl;
+	}
+
+	std::cout << std::endl << "\033[33mTesting operator [] and out of range exception...\033[0m" << std::endl;
 	try {
 		std::cout << strArray2[3];
 		std::cout << "Test strArra2y[3] [ \033[31mKO\033[0m ] Houston, we have a problem!!!" << std::endl;

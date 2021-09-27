@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 14:36:35 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/27 19:42:26 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/27 21:52:29 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,22 @@ class	Array {
 				_array[i] = src._array[i];
 		}
 
-		~Array( void ) { delete [] _array; }
+		~Array( void ) { 
+
+			if (this->_array != NULL)
+				delete [] this->_array;
+		}
 
 		Array &	operator=( Array const & rhs ) {
 
 			if (this != &rhs) {
 
-				delete [] _array;
-				_size = rhs._size;
-				_array = new T[_size];
+				if (this->_array != NULL)
+					delete [] this->_array;
+				this->_size = rhs._size;
+				this->_array = new T[_size];
 				for (unsigned int i = 0; i < _size; i++)
-					_array[i] = rhs._array[i];
+					this->_array[i] = rhs._array[i];
 			}
 
 			return *this;
@@ -44,7 +49,7 @@ class	Array {
 		T &		operator[]( unsigned int i ) {
 
 			if (i < 0 || i >= _size)
-				throw OutOfRangeException();
+				throw Array::OutOfRangeException();
 			
 			return _array[i];
 		}
@@ -52,8 +57,8 @@ class	Array {
 		unsigned int	size( void ) { return _size; }
 
 		class OutOfRangeException: public std::exception {
-			public:
-				char const * what() const throw() {
+			
+			virtual char const * what() const throw() {
 					return ("Element out of range");
 				}
 		};

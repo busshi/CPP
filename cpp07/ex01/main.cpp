@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 13:23:33 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/27 16:00:15 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/27 21:23:06 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	testingInt( void ) {
 
 	size_t	len = 5;
-	int		array[] = {42, 24, 12, 6, 3};
+	int		array[5] = {42, 24, 12, 6, 3};
 
 	std::cout << "\033[33mTesting integers...\033[0m" << std::endl;
 	std::cout << "Print the initialized array..." << std::endl;
@@ -34,7 +34,7 @@ void	testingInt( void ) {
 void	testingChar( void ) {
 
 	size_t	len = 5;
-	char	array[] = {'a', 'b', 'c', 'd', 'e'};
+	char	array[5] = {'a', 'b', 'c', 'd', 'e'};
 
 	std::cout << std::endl << std::endl << "\033[33mTesting char...\033[0m" << std::endl;
 	std::cout << "Print the initialized array..." << std::endl;
@@ -52,7 +52,7 @@ void	testingChar( void ) {
 void	testingFloat( void ) {
 
 	size_t	len = 5;
-	float	array[] = {42.42f, 84.84f, 168.168f, 336.336f, 672.672f};
+	float	array[5] = {42.42f, 84.84f, 168.168f, 336.336f, 672.672f};
 
 	std::cout << std::endl << std::endl << "\033[33mTesting float...\033[0m" << std::endl;
 	std::cout << "Print the initialized array..." << std::endl;
@@ -70,7 +70,7 @@ void	testingFloat( void ) {
 void	testingString( void ) {
 
 	size_t		len = 3;
-	std::string	array[] = {"hello", "coucou", "holà"};
+	std::string	array[5] = {"hello", "coucou", "holà"};
 
 	std::cout << std::endl << std::endl << "\033[33mTesting strings...\033[0m" << std::endl;
 	std::cout << "Print the initialized array..." << std::endl;
