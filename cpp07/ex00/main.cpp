@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 11:24:33 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/27 12:10:28 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/27 21:58:37 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	testingGivenMain( void ) {
 	int		a = 2;
 	int		b = 3;
 
+	std::cout << "\033[33mSubject tests...\033[0m" << std::endl;
 	::swap( a, b );
 	std::cout << "a = " << a << ", b = " << b << std::endl;
 	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
