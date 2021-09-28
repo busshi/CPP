@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 19:11:33 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/28 20:23:08 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/29 00:11:42 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,19 @@ class	Span {
 		void			addRange( int start, int end );
 		unsigned int	shortestSpan( void );
 		unsigned int	longestSpan( void );
+		void			printStorage( void );
 
 		class NoSpanException: public std::exception {
 
 			virtual char const * what() const throw() {
-				return ("No span!");
+				return ("\033[31mNo span!\033[0m");
 			}
 		};
 
 		class FullStorageException: public std::exception {
 
 			virtual char const * what() const throw() {
-				return ("Cannot add more numbers. Storage is full!");
+				return ("\033[31mCannot add more numbers. Storage is full!\033[0m");
 			}
 		};
 
