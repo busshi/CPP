@@ -6,19 +6,19 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/28 18:51:13 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/28 21:15:30 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= iter
+NAME		= span
 
-SRCS		= main.cpp
+SRCS		= main.cpp span.cpp
 
-HEADER		= iter.hpp
+HEADER		= span.hpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
-FLAGS		= -Wall -Wextra -Werror -std=c++98
+FLAGS		= -Wall -Wextra -Werror -std=c++98 -g
 
 CC			= @clang++
 
