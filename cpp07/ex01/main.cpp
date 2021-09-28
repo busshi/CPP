@@ -6,12 +6,30 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 13:23:33 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/27 21:23:06 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/28 15:49:38 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
-#include "functions.hpp"
+#include <iostream>
+
+template< typename T >
+void	initArray( T & content ) {
+
+	content = 42;
+}
+
+template< typename T >
+void	printArray( T const & content ) {
+
+	std::cout << content << " ";
+}
+
+template<typename T >
+void	incrementArray( T & content ) {
+
+	content++;
+}
 
 void	testingInt( void ) {
 
@@ -19,8 +37,8 @@ void	testingInt( void ) {
 	int		array[5] = {42, 24, 12, 6, 3};
 
 	std::cout << "\033[33mTesting integers...\033[0m" << std::endl;
-	std::cout << "Print the initialized array..." << std::endl;
-	::iter(array, len, printArray<int>);
+	std::cout << "Print the array..." << std::endl;
+	::iter(array, len, printArray);
 
 	std::cout << std::endl << std::endl << "Increment each value in the array and display it..." << std::endl;
 	::iter(array, len, incrementArray<int>);
@@ -37,8 +55,8 @@ void	testingChar( void ) {
 	char	array[5] = {'a', 'b', 'c', 'd', 'e'};
 
 	std::cout << std::endl << std::endl << "\033[33mTesting char...\033[0m" << std::endl;
-	std::cout << "Print the initialized array..." << std::endl;
-	::iter(array, len, printArray<char>);
+	std::cout << "Print the array..." << std::endl;
+	::iter(array, len, printArray);
 
 	std::cout << std::endl << std::endl << "Increment each value in the array and display it..." << std::endl;
 	::iter(array, len, incrementArray<char>);
@@ -55,8 +73,8 @@ void	testingFloat( void ) {
 	float	array[5] = {42.42f, 84.84f, 168.168f, 336.336f, 672.672f};
 
 	std::cout << std::endl << std::endl << "\033[33mTesting float...\033[0m" << std::endl;
-	std::cout << "Print the initialized array..." << std::endl;
-	::iter(array, len, printArray<float>);
+	std::cout << "Print the array..." << std::endl;
+	::iter(array, len, printArray);
 
 	std::cout << std::endl << std::endl << "Increment each value in the array and display it..." << std::endl;
 	::iter(array, len, incrementArray<float>);
@@ -74,7 +92,7 @@ void	testingString( void ) {
 
 	std::cout << std::endl << std::endl << "\033[33mTesting strings...\033[0m" << std::endl;
 	std::cout << "Print the initialized array..." << std::endl;
-	::iter(array, len, printArray<std::string>);
+	::iter(array, len, printArray);
 
 	std::cout << std::endl << std::endl << "Reinit the strings with default value and display the array..." << std::endl;
 	::iter(array, len, initArray<std::string>);

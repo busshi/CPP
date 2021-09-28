@@ -6,7 +6,7 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/27 14:32:48 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/28 15:51:54 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		= iter
 
 SRCS		= main.cpp
 
-HEADER		= iter.hpp functions.hpp
+HEADER		= iter.hpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
