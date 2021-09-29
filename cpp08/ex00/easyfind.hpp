@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 09:41:25 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/28 19:06:33 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/29 01:17:54 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class NotFoundException: public std::exception {
 
-	virtual char const * what() const throw() {
+	virtual const char * what() const throw() {
 
 		return ("Not found");
 	}

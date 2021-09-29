@@ -6,15 +6,15 @@
 #    By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 18:20:46 by aldubar           #+#    #+#              #
-#    Updated: 2021/09/29 10:41:20 by aldubar          ###   ########.fr        #
+#    Updated: 2021/09/29 10:52:55 by aldubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= span
+NAME		= mutantStack
 
-SRCS		= main.cpp span.cpp
+SRCS		= main.cpp mutantstack.cpp
 
-HEADER		= span.hpp
+HEADER		= mutantstack.hpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
