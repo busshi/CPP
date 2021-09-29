@@ -6,7 +6,7 @@
 /*   By: aldubar <aldubar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:45:03 by aldubar           #+#    #+#             */
-/*   Updated: 2021/09/29 12:53:37 by aldubar          ###   ########.fr       */
+/*   Updated: 2021/09/29 13:03:43 by aldubar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,15 +147,15 @@ void	testingReverseIterator( void ) {
 	MutantStack<int>	m;
 
 	std::cout << std::endl << std::endl << "\033[33mTesting reverse iterator...\033[0m" << std::endl;
-	for (int i = 0; i < 42; i++)
+	for (int i = 1; i <= 42; i++)
 		m.push(i);
 
 	std::cout << "Stack:";
-	for (MutantStack<int>::reverse_iterator it = m.rbegin(); it != m.rend(); it++) 
+	for (MutantStack<int>::const_reverse_iterator it = m.rbegin(); it != m.rend(); it++) 
 	   	std::cout << " [ " << *it << " ]";
 	
-	std::cout << std::endl << std::endl << "Stack:";
-	for (MutantStack<int>::const_reverse_iterator it = m.rbegin(); it != m.rend(); it++) 
+	std::cout << std::endl << std::endl << "Reverse stack:";
+	for (MutantStack<int>::const_reverse_iterator it = m.rend() - 1; it != m.begin() - 1; it--) 
 	   	std::cout << " [ " << *it << " ]";
 
 	std::cout << std::endl;
